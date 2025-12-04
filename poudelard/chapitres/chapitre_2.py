@@ -1,3 +1,4 @@
+from poudelard.univers.personnage import afficher_personnage
 from poudelard.utils.input_utils import demander_choix
 from poudelard.univers.maison import repartition_maison
 
@@ -88,3 +89,46 @@ def ceremonie_repartition(joueur):
 
         print(f"\nLe Choixpeau s'exclame : {maison_assignee} !!!")
         print(f"Tu rejoins les élèves de {maison_assignee} sous leurs applaudissements !")
+
+
+def installation_salle_commune(joueur):
+    if joueur['Maison'] == "Serpentard":
+        print("Vous suivez les préfets à travers les couloirs du château...\n "
+              "Vous découvrez une salle voûtée, éclairée par la lueur verte du lac. "
+              "Les élèves vous observent avec curiosité et respect.\n"
+              "La ruse et l’ambition sont vos alliées. Bienvenue dans la noble maison Serpentard.\n"
+              "Les couleurs de votre maison : vert, argent")
+
+    elif joueur['Maison'] == "Gryffondor":
+        print("Vous suivez les préfets à travers les couloirs du château...\n "
+              "Vous découvrez une salle voûtée, éclairée par la lueur rouge des torches. "
+              "Les élèves vous observent avec curiosité et respect.\n"
+              "Le courage et la force sont vos alliées. Bienvenue dans la noble maison Gryffondor.\n"
+              "Les couleurs de votre maison : rouge, orange")
+
+    elif joueur['Maison'] == "Poufsouffle":
+        print("Vous suivez les préfets à travers les couloirs du château...\n "
+              "Vous découvrez une salle voûtée, éclairée par la lueur jaune des bougies. "
+              "Les élèves vous observent avec curiosité et respect.\n"
+              "Le gentilesse et la justice sont vos alliées. Bienvenue dans la noble maison Poufsouffle.\n"
+              "Les couleurs de votre maison : jaune, noir")
+
+    elif joueur['Maison'] == "Serdaigle":
+        print("Vous suivez les préfets à travers les couloirs du château...\n "
+              "Vous découvrez une salle voûtée, éclairée par la lueur bleue de la lune. "
+              "Les élèves vous observent avec curiosité et respect.\n"
+              "L'intellect et la sagesse sont vos alliées. Bienvenue dans la noble maison Serdaigle.\n"
+              "Les couleurs de votre maison : bleu, bronze")
+
+
+def lancer_chapitre_2(personnage):
+    print("==================================================")
+    print("              CHAPTER 2: VOYAGE & RÉPARTITION     ")
+    print("==================================================")
+    rencontrer_amis(personnage)
+    mot_de_bienvenue()
+    ceremonie_repartition(personnage)
+    installation_salle_commune(personnage)
+    print("--- Profil du Joueur après Chapitre 2 ---\n")
+    afficher_personnage(personnage)
+    print("<<< Fin du Chapitre 2 ! Vos cours de magie commencent à Poudlard... >>>\n")

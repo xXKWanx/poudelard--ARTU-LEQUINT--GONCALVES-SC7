@@ -11,12 +11,12 @@ def demander_nombre(message, min_val=None, max_val=None):
     while True:
         saisie = input(message).strip()
 
-        if saisie.startswith("-"):
+        if saisie[0] == "-":
             chaine_verif = saisie[1:]
         else:
             chaine_verif = saisie
 
-        if chaine_verif.isdigit() and chaine_verif:
+        if type(chaine_verif) == "int" and chaine_verif:
             valeur = int(saisie)
             if (min_val is None or valeur >= min_val) and (max_val is None or valeur <= max_val):
                 return valeur
@@ -34,5 +34,5 @@ def demander_choix(message, options):
 
 
 def load_fichier(chemin_fichier):
-    with open(chemin_fichier, 'r') as f:
+    with open(chemin_fichier, 'r',  encoding = 'utf-8') as f:
         return json.load(f)
