@@ -11,7 +11,7 @@ def rencontrer_amis(joueur):
     choix_ron = demander_choix("Que répondez-vous ?", ["Bien sûr, assieds-toi !", "Désolé, je préfère voyager seul."])
 
     if choix_ron == "Bien sûr, assieds-toi !":
-        joueur['Attributs']['loyauté'] += 1
+        joueur['Attributs']['loyaute'] += 1
         print("Ron sourit : Génial ! Tu verras, Poudlard, c'est incroyable !")
     else:
         joueur['Attributs']['ambition'] += 1
@@ -41,7 +41,7 @@ def rencontrer_amis(joueur):
         joueur['Attributs']['ambition'] += 1
         print("Drago hoche la tête avec satisfaction.")
     elif choix_drago == "Je l'ignore complètement.":
-        joueur['Attributs']['loyauté'] += 1
+        joueur['Attributs']['loyaute'] += 1
         print("Drago fronce les sourcils, vexé : Tu le regretteras !")
     else:
         joueur['Attributs']['courage'] += 1

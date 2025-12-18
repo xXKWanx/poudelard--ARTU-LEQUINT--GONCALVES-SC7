@@ -47,17 +47,17 @@
     {
         "nom": "Expelliarmus",
         "description": "Désarme un adversaire.",
-        "type": "Défensif"
+        "type": "Défensif"
     },
     {
         "nom": "Protego",
         "description": "Crée un bouclier magique pour bloquer les attaques.",
-        "type": "Défensif"
+        "type": "Défensif"
     },
     {
         "nom": "Finite Incantatem",
         "description": "Met fin aux sorts ou effets en cours.",
-        "type": "Défensif"
+        "type": "Défensif"
     },
     {
         "nom": "Petrificus Totalus",
@@ -97,7 +97,7 @@
     {
         "nom": "Expecto Patronum",
         "description": "Convoque un Patronus pour repousser les Détraqueurs.",
-        "type": "Défensif"
+        "type": "Défensif"
     },
     {
         "nom": "Diffindo",
@@ -112,7 +112,7 @@
     {
         "nom": "Rennervate",
         "description": "Réanime une personne assommée ou inconsciente.",
-        "type": "Défensif"
+        "type": "Défensif"
     },
     {
         "nom": "Incarcerous",

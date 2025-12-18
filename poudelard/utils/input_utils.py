@@ -8,24 +8,29 @@ def demander_texte(message):
 
 
 def demander_nombre(message, min_val=None, max_val=None):
-    while True:
+    valeur_finale = None
+    while valeur_finale is None:
         saisie = input(message).strip()
 
-        if saisie[0] == "-":
+        if saisie.startswith("-"):
             chaine_verif = saisie[1:]
         else:
             chaine_verif = saisie
 
-        if type(chaine_verif) == "int" and chaine_verif:
+        if chaine_verif.isdigit() and chaine_verif != "":
             valeur = int(saisie)
             if (min_val is None or valeur >= min_val) and (max_val is None or valeur <= max_val):
-                return valeur
+                valeur_finale = valeur
+            else:
+                print(f"Erreur : entrez un nombre entre {min_val} et {max_val}.")
+        else:
+            print("Erreur : veuillez entrer un nombre entier.")
 
-        print("Veuillez entrer un nombre entier valide.")
+    return valeur_finale
 
 
 def demander_choix(message, options):
-    print(message)
+    print(f"\n{message}")
     for i in range(len(options)):
         print(f"{i + 1}. {options[i]}")
 
