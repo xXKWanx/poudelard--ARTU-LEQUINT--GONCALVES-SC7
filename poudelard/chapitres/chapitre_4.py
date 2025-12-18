@@ -49,5 +49,7 @@ def afficher_score (e1, e2):
     print(f"{e2['nom']} : {e2['score']} points")
 
 def afficher_equipe(maison, equipe):
-    print (f"Equipe de : {maison}")
+    print(f"Équipe de {maison} :")
+    for joueur in equipe["joueurs"]:
+        print(joueur)
 
